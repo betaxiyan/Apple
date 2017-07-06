@@ -10,6 +10,8 @@ package com.neon.apple.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
 
 /**
  * 人的实体类
@@ -21,11 +23,18 @@ import javax.persistence.Id;
  */
 @Entity
 public class People {
+    @NotNull(message="姓名不能为空！")
     private String name;
     private Integer age;
     private String sex;
     @Id
     private Integer id;
+    
+    
+    @Override
+    public String toString() {
+        return "People [name=" + name + ", age=" + age + ", sex=" + sex + ", id=" + id + "]";
+    }
     public String getName() {
         return name;
     }
