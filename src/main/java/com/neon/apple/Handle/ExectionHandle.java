@@ -18,6 +18,7 @@ public class ExectionHandle {
     @ExceptionHandler(value=Exception.class)
     private Result getHandle() {
         /*测试git*/
+        //sun.security.provider.certpath.ssl;
         
     }
     
