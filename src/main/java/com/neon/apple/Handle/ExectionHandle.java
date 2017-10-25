@@ -19,7 +19,11 @@ public class ExectionHandle {
     private Result getHandle() {
         /*测试git*/
         //sun.security.provider.certpath.ssl;
-        
+        Result<String> result = new Result<String>();
+        result.setCode(1);
+        result.setMessage("setMessage");
+        result.setData("data");
+        return result;
     }
     
 }
